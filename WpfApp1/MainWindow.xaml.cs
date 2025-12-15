@@ -55,6 +55,7 @@ namespace WpfApp1
                 ((Mozi)dataGrid.SelectedItem).Szabadhelyek = 
                     ((Mozi)dataGrid.SelectedItem).Szabadhelyek - 1;
                 dataGrid.Items.Refresh();
+
             }
             
         }
