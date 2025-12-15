@@ -20,6 +20,8 @@
             <Button Content="Helyfoglalás" Width="120" Click="foglalás"/>
             <Button Content="Szabad helyek" Width="120" Click="vanhely"/>
             <Button Content="Legnépszerűbb" Width="120" Click="legnepszerubb"/>
+            <Button Content="Átlagos szabad hely" Width="120" Click="atlagszabadhely"/>
+            <Button Content="Csak 3D-s filmek" Width="120" Click="legnepszerubb"/>
             
         </StackPanel>
 

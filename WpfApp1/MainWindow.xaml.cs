@@ -92,5 +92,33 @@ namespace WpfApp1
             dataGrid.ItemsSource = eredmeny;
             dataGrid.Items.Refresh();
         }
+
+        private void atlagszabadhely(object sender, RoutedEventArgs e)
+        {
+            if (mozifilmek.Count == 0) return;
+
+            int osszeg = 0;
+            foreach (var mozi in mozifilmek)
+            {
+                osszeg += mozi.Szabadhelyek;
+            }
+
+            double atlag = (double)osszeg / mozifilmek.Count;
+
+            List<Mozi> atlagFelettiek = new List<Mozi>();
+            foreach (var mozi in mozifilmek)
+            {
+                if (mozi.Szabadhelyek >= atlag)
+                {
+                    atlagFelettiek.Add(mozi);
+                }
+            }
+
+            dataGrid.ItemsSource = atlagFelettiek;
+            dataGrid.Items.Refresh();
+        }
+
+
+
     }
 }
