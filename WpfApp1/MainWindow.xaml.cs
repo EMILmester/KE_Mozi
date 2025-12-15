@@ -118,6 +118,21 @@ namespace WpfApp1
             dataGrid.Items.Refresh();
         }
 
+        private void csak3Dfilmek(object sender, RoutedEventArgs e)
+        {
+            List<Mozi> haromDfilmek = new List<Mozi>();
+
+            foreach (var mozi in mozifilmek)
+            {
+                if (mozi._3D)
+                {
+                    haromDfilmek.Add(mozi);
+                }
+            }
+
+            dataGrid.ItemsSource = haromDfilmek;
+            dataGrid.Items.Refresh();
+        }
 
 
     }
