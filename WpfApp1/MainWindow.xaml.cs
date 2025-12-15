@@ -72,6 +72,25 @@ namespace WpfApp1
             dataGrid.Items.Refresh();
         }
 
-        
+        private void legnepszerubb(object sender, RoutedEventArgs e)
+        {
+            if (mozifilmek.Count == 0) return;
+
+            Mozi legnepszerubbFilm = mozifilmek[0];
+
+            foreach (var mozi in mozifilmek)
+            {
+                if (mozi.Szabadhelyek < legnepszerubbFilm.Szabadhelyek)
+                {
+                    legnepszerubbFilm = mozi;
+                }
+            }
+
+            List<Mozi> eredmeny = new List<Mozi>();
+            eredmeny.Add(legnepszerubbFilm);
+
+            dataGrid.ItemsSource = eredmeny;
+            dataGrid.Items.Refresh();
+        }
     }
 }
