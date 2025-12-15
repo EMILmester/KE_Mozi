@@ -18,6 +18,8 @@
         <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="5">
             <Button Content="Adatok betöltése" Width="120" Click="Adatokbetöltése"/>
             <Button Content="Helyfoglalás" Width="120" Click="foglalás"/>
+            <Button Content="Szabad helyek" Width="120" Click="vanhely"/>
+            <Button Content="Legnépszerűbb" Width="120" Click="legnepszerubb"/>
             
         </StackPanel>
 

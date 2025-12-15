@@ -59,5 +59,19 @@ namespace WpfApp1
             }
             
         }
+
+        private void vanhely(object sender, RoutedEventArgs e)
+        {
+            List<Mozi> csakaholvanhely = new List<Mozi>();
+            foreach (var mozi in mozifilmek)
+            {
+                if (mozi.Szabadhelyek > 0)
+                    csakaholvanhely.Add(mozi);
+            }
+            dataGrid.ItemsSource = csakaholvanhely;
+            dataGrid.Items.Refresh();
+        }
+
+        
     }
 }
